@@ -113,7 +113,7 @@ async function loadData() {
 // Регистрация Service Worker с Workbox
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then(reg => console.log('SW зарегистрирован:', reg))
       .catch(err => console.log('SW регистрация не удалась:', err));
   });

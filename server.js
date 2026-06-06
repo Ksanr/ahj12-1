@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
+
 const app = express();
+app.use(cors());
 
 // Middleware для искусственной задержки (5 секунды)
 const slowMiddleware = (req, res, next) => {
