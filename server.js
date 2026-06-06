@@ -27,7 +27,6 @@ app.get('/api/posts', slowMiddleware, (req, res) => {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Все остальные маршруты отдаём index.html (SPA)
-// Исправленный синтаксис для Express 5
 app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
