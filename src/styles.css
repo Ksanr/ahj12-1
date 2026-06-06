@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f7fa;
+  padding: 2rem;
+}
+
+/* Общий контейнер */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Скелетон загрузки */
+.skeleton {
+  padding: 2rem;
+}
+
+.skeleton-header {
+  width: 60%;
+  height: 32px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.skeleton-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-avatar {
+  width: 50px;
+  height: 50px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.skeleton-line {
+  flex: 1;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.skeleton-line.short {
+  width: 70%;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Режим ошибки */
+.error-container {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.retry-btn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.retry-btn:hover {
+  background: #115293;
+}
+
+/* Реальный контент */
+.posts-list {
+  padding: 1.5rem;
+}
+
+.post-card {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.post-body {
+  color: #555;
+  line-height: 1.4;
+}
