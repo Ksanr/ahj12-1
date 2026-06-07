@@ -3,7 +3,13 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+
+const corsOptions = {
+    origin: 'https://ksanr.github.io',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 // Middleware для искусственной задержки (5 секунды)
 const slowMiddleware = (req, res, next) => {

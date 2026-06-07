@@ -16,5 +16,15 @@
     { "src": "/main.js", "dest": "/dist/main.js" },
     { "src": "/styles.css", "dest": "/dist/styles.css" },
     { "src": "/(.*)", "dest": "/dist/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://ksanr.github.io" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
   ]
 }
