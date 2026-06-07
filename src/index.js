@@ -30,14 +30,16 @@ function renderSkeleton() {
 }
 
 // Функция отрисовки ошибки
-function renderError(message = 'Не удалось загрузить данные. Проверьте соединение.') {
+function renderError() {
   appDiv.innerHTML = '';
   const container = document.createElement('div');
   container.className = 'app-container';
   container.innerHTML = `
     <div class="error-container">
       <div class="error-icon">⚠️</div>
-      <div class="error-message">${message}</div>
+      <div class="error-message">Не удалось загрузить данные</div>
+      <div class="error-message">Проверьте подключение</div>
+      <div class="error-message">и обновите страницу</div>
       <button class="retry-btn" data-retry>Попробовать снова</button>
     </div>
   `;
@@ -104,7 +106,7 @@ async function loadData() {
   } catch (err) {
     console.error('Ошибка загрузки:', err);
     currentState = 'error';
-    renderError('Сервер недоступен или данные не получены. Попробуйте позже.');
+    renderError();
     // Устанавливаем колбэк для повтора
     retryCallback = () => loadData();
   }

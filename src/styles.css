@@ -81,6 +81,10 @@ body {
 .error-message {
   color: #d32f2f;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-message:last-of-type {
   margin-bottom: 1.5rem;
 }
 
